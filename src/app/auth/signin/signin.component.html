@@ -1,0 +1,22 @@
+<div class="row" id="landing-header">
+<div class="login-page">
+  <div class="form">
+      <form (ngSubmit)="onSignin(f)" #f="ngForm" >
+  
+  <p class="welcome">Welcome to Appstaurant!!</p>
+          <input type="email" id="email" name="email" placeholder="Email" ngModel class="form-control" required>
+          <input type="password" id="password" name="password" placeholder="Password" ngModel class="form-control" required>
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
+ 
+      </form>
+    <p class="message" routerLink="/signup" style="padding-top: 15px; cursor: pointer; color: blue;">Not registered? Click here to Register!! </p>
+    <p class="message" routerLink="/resetpw" style="cursor: pointer; color: blue;">Forgot User/Password?, Click here to reset. </p>    
+  </div>
+</div>
+</div>
+<ul class="slideshow">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>

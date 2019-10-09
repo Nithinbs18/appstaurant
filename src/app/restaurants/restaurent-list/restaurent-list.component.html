@@ -1,0 +1,4 @@
+  <div class="row" id="scroll">
+    <div class="col-md-12" id="list">
+      <app-restaurant-item *ngFor="let restEl of restaurants; let i = index" [restaurant] = "restEl" [index]="i"></app-restaurant-item> 
+     </div>

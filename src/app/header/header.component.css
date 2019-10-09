@@ -1,0 +1,36 @@
+/* #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+  }
+
+  #landing-header .nav-link{
+      color: white;
+  }
+
+  #landing-header .navbar-brand{
+    color: white;
+}
+.navbar.scrolled{
+    background: rgb(222,192,222);
+   
+}
+#landing-header .nav-link:hover{
+    color: rgb(200, 238, 61);
+}
+#landing-header .navbar-brand{
+    color:white;
+} */
+
+/* .my-toolbar{position: relative;
+top: 0
+} */
+
+.my-toolbar{
+    background: black;
+    height: 50px;
+    color: beige;
+}
+.fill-remaining-space{ flex: 1 1 auto;}
+
+

@@ -1,0 +1,29 @@
+<div class="row" id="landing-header">
+    <div class="login-page">
+        <div class="form">
+    <form (ngSubmit)="onSignup(f)" #f="ngForm">
+  <p class="welcome">Hello again! You're just a click away from Registration</p>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="User Name" name="uname" ngModel class="form-control" required>
+          </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email" name="email" ngModel class="form-control" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Pssword" name="password" ngModel class="form-control" required>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Register</button>
+    </form>
+  <p class="message">Once registered, please login to continue.</p>
+   <p *ngIf="init" class="message" routerLink="/signin" style="padding-top: 15px; cursor: pointer; color: blue;">Already registered? Click here to Login!! </p>    
+    <p *ngIf="userExistance" class="message" routerLink="/signin" style="padding-top: 15px; cursor: pointer; color: red;">User alredy exists,please login to continue.</p>
+    <p *ngIf="created" class="message" routerLink="/signin" style="padding-top: 15px; cursor: pointer; color: green;">Registration Successful!! Click here to Login.</p>
+  </div>
+</div>
+</div>
+<ul class="slideshow">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>

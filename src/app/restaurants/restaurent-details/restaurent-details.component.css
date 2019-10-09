@@ -1,0 +1,15 @@
+.margin{
+    margin: 10px;
+}
+.header{
+    font-weight: bold;
+    font-size: 2em;
+}
+.list-group-item
+{
+    background: rgb(186, 245, 245);}
+
+.list-group-item
+ {height: 200px;
+    overflow-y: auto;}
+.row{margin-top:75px;}

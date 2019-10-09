@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)="addItem(f)" #f="ngForm">
+        <div class="row">
+          <!-- <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Name" required ngModel>
+          </div> -->
+        </div>
+        <div class="row">
+            <input type="text" class="form-control" name="comment" placeholder="Comment" required ngModel>
+        </div> 
+        <div class="row"  style="margin: 15px">
+          <label for="rating">Rate Here:</label>
+            <app-restaurant-rating></app-restaurant-rating>
+        </div>   
+        <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-success" type="submit"  style="margin: 10px" > Add </button>
+              <button class="btn btn-danger" style="margin: 10px" (click)="cancle()">Cancel</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>

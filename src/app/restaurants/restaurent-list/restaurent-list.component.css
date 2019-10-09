@@ -1,0 +1,15 @@
+#list{
+    color: tomato;
+    
+}
+
+#scroll{
+    height: 680px;
+    overflow-y: scroll;
+    position: fixed;
+    
+    
+}
+
+.row{margin-top:75px;}
+

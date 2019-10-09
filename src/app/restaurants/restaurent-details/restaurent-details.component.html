@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div class="container">
+<div class="row">
+  <div class="col-md-12 img-thumbnail">
+      <div class="caption">
+          <p><span class="header">{{restaurant.name}}</span>
+          <span class="float-right" style="padding-top: 20px">
+           User Rating: <strong>{{userRating.toFixed(2)}} / 5</strong>
+          </span></p>
+      </div>
+    <img [src]="initImg" class="img-responsive img-thumbnail main"  height="500" width="800">
+      <div class="col-md-12">
+          <img [src]="img" *ngFor="let img of images; let i = index" (click)="onImgClick(i);" height="150px" width="180px" class="img-thumbnail rounded float"
+          style="cursor: pointer">
+        </div>
+  </div>
+</div>
+<br>
+ <label><strong>Description :</strong></label>
+    <div class="col-md-12" style="margin-bottom: 10px">
+        {{restaurant.description}}
+    </div>
+    <label><strong>Address :</strong> <br> Friedrichstraße 15, 69117 Heidelberg</label>
+    <div><strong>Hours: </strong> <br> 
+      Monday	11am–11:30pm <br>
+      Tuesday	11am–11:30pm<br>
+      Wednesday	11am–11:30pm<br>
+      Thursday	11am–11:30pm<br>
+      Friday	11am–11:30pm<br>
+      Saturday	11am–11:30pm<br>
+      Sunday	11am–11:30pm<br>
+    </div>
+    <div style="padding-top: 15px"><strong> Phone:</strong>    06221 6530893</div>
+<div class="row" style="margin: 10px">
+    <div class="col-md-12">
+      <div class="btn-group">
+        <button type="button" class="btn btn-success" (click)="addToFav()" routerLink="added">Favorite This <span><i class="fas fa-heart"></i></span></button>
+      </div>
+      <div class="btn-group">
+        <a href="{{restaurant.route}}" target="_blank" class="btn btn-success" style="margin: 25px">Direction</a>
+      </div>
+      <div class="btn-group float-sm-right">
+          <button type="button" class="btn btn-primary" routerLink="new">Comment <span><i class="fas fa-comment"></i></span> /Rate <span><i class="fas fa-star"></i></span></button>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+<div class="row" style="margin: 26px" >
+  <div style="margin-bottom: 10px">
+      <strong>User Comments:</strong>
+  </div>
+  <br>
+  <div class="col-md-12 ">
+    <ul class="list-group-item">
+      <div *ngFor="let comment of restaurant.comments">
+        <strong>{{comment.name}}</strong>: <span style="padding-left: 5px;">{{comment.comment}}</span>
+        <br>
+      <hr>
+      </div>
+    </ul>
+  </div>
+</div>   
+</div> 
+

@@ -1,0 +1,22 @@
+
+    <div class="col-md-10 t">
+        <ul class="list-group" >          
+        <div *ngFor="let usr of usrList">
+            <div *ngIf="usr.email == email">  
+                    <div *ngIf="!(usr.list.length > 1)" routerLink= "/restaurants" class="default-text">Please add a restaurant to your favorite list.</div>           
+                    <h5 *ngFor="let rest of usr.list, let i = index" 
+                    (mouseenter) ="show(rest)"  (mouseleave) ="show(rest)">
+                    <div *ngIf="rest != ''" class="list-group-item">
+                            {{rest}}
+                        <span class="float-right" >
+                            <button class="btn btn-sm btn-success" *ngIf="showBtn" (click)="onInfo()" >Show Info</button>
+                        </span>
+                    </div>                    
+                    </h5>
+                <ng-template #ngElse>
+                        <p routerLink= "/restaurants" class="default-text">Please add restaurants to your list.</p>
+                </ng-template>
+            </div>
+        </div>
+        </ul>
+      </div>

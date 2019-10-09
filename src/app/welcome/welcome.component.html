@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div class="text-center">    
+
+  <div class="row no-gutters">
+    
+    <div class="col-lg-6"> 
+        
+        <svg viewBox="0 0 1800 600">
+            <symbol id="s-text">
+              <text text-anchor="middle"
+                    x="45%"
+                    y="35%"
+                    class="flicker"
+                    >
+                Guten 
+              </text>
+              <text text-anchor="middle"
+                    x="50%"
+                    y="68%"
+                    class="text--line"
+                    >
+               Appetite !!
+              </text>
+              
+            </symbol>
+            
+            <g class="g-ants">
+              <use xlink:href="#s-text"
+                class="flicker-1"></use>     
+              <use xlink:href="#s-text"
+                class="flicker-1"></use>     
+              <use xlink:href="#s-text"
+                class="flicker-1"></use>     
+              <use xlink:href="#s-text"
+                class="flicker-1"></use>     
+              <use xlink:href="#s-text"
+                class="flicker-1"></use>     
+            </g>
+            
+            
+          </svg>
+          
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-success"></div>
+        <div class="spinner-grow text-info"></div>
+        <div class="spinner-grow text-warning"></div>
+        <div class="spinner-grow text-danger"></div>
+        <p class="line-2">Are you in Heidelberg ?<br>Want to savour some Indian Food ?<br>You are in the right page !!</p>
+    </div>
+    <div class=" col-lg-6 im-1 padding-0">
+      <img src="https://s3.amazonaws.com/studio-me/system/photos/photos/000/780/447/large/iStock_000026876801_Small.jpg?1414523778" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+   
+    <!-- <div class=" col-lg-12 tab padding-0">
+        <p class="line-1 anim-typewriter">Are you in Heidelberg ?<br>Want to savour some Indian Food ?<br>You are in the right page !!</p>
+    </div> -->
+
+    <div class="col-lg-6">
+        <div class="wrapper">
+            <div class="pulse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+        </div>
+        <!-- <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhMt9O9Ad4ojbv4zYnJfM6PPKe7WRpeErDl0ERK89KpNP2iGMe" class="img-responsive img-1" style="width:100%" alt="Image"> -->
+    </div>
+    <div class="col-sm-6"> 
+     
+        <section>
+            <div class="bgPulse">
+              
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <br><br><br><br><br><br><br>
+              <h6 style="padding: 40px; color: white ; text-align: center">In Germany, Indian restaurants first opened up in some major cities in the 1960s; In the 1980s, smaller towns followed.The development of India into a holiday destination had a considerable influence on the spread of Indian cuisine, and Indian immigrants also made the food popular.The selection and especially the sharpness of the food in the restaurants was adapted to the German eating habits as well. The internationally best-known Indian dishes became popular under the collective name word <strong>curry</strong> refers to various foods, but outside of India it is also the established term for a ready-to-use spice mixture, the curry powder. Its name was derived from the common in India, the same type of preparation, which most closely corresponds to a ragout. On the other hand, the various spice mixtures are called Masala (Garam Masala, for example). There is also the curry tree, whose aromatic leaves are used in Indian cuisine.<br>We bring to you all the Indian restaurants in Heidelberg.Explore the best in Heidelberg!!</h6>
+              <div class="btn btn-primary" *ngIf="login" routerLink="/signup">Register to continue!!</div>
+            </div>
+          </section>
+         
+    </div>
+    <!-- <div class="col-sm-3">
+        <img src="https://external-preview.redd.it/pio0esuUBa703DbSw3tQWKc-7GSuIjVk39Da2PqIjVs.jpg?width=640&auto=webp&s=acf9e94862595b6fdd97a42e17a77ebf17217c4b"     class="img-responsive img-1" style="width:100%" alt="Image">
+    </div> -->
+    
+  </div>
+</div>
+
+<!-- <footer class="container-fluid text-center bg-dark enter fixed-bottom"> -->
+<ng-template [ngIf]="authService.isAuthenticated()">
+    <div class="container-fluid text-center  fixed-bottom btn btn-dark btn-block" routerLink="/restaurants">Enter Application <span><i class="fas fa-arrow-right"></i></span></div>
+</ng-template>
+<!-- </footer> -->

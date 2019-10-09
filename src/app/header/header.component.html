@@ -1,0 +1,73 @@
+
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-0 fixed-top" id= "landing-header" >
+    <a class="navbar-brand" routerLink="/welcome"><span><i class="fas fa-utensils"></i></span><strong>  Appstaurant </strong> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <ng-template [ngIf]="auth.isAuthenticated()">
+            <li class="nav-item" routerLinkActive="active">
+               
+                <a class="nav-link" routerLink="/restaurants" >Restaurants</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/favorite-list">Favorites</a>
+              </li>
+        </ng-template>
+        <ng-template [ngIf]="!auth.isAuthenticated()">
+        <li>
+            <a  class="nav-link" routerLink="/signup">Register</a>
+        </li>
+        <li>
+            <a  class="nav-link" routerLink="/signin">Login</a>
+        </li>
+      </ng-template>
+      </ul>
+    </div>
+   
+  </nav> -->
+
+  <mat-toolbar color="dark" class="my-toolbar fixed-top" >
+
+    <button mat-button routerLink="/welcome">
+    <mat-icon>local_dining</mat-icon> 
+       Appstaurant</button>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space"></span>
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <ng-template [ngIf]="auth.isAuthenticated()">
+        <button mat-button routerLink="/restaurants">Restaurants</button>
+        <button mat-button routerLink="/favorite-list">Favourite-List</button>
+      </ng-template>
+      <ng-template [ngIf]="!auth.isAuthenticated()">
+          <button mat-button routerLink="/signup">Register</button>
+          <button mat-button routerLink="/signin">LogIn</button>
+      </ng-template>
+      <ng-template [ngIf]="auth.isAuthenticated()">
+        <button mat-button style="cursor:pointer"  (click)="usrLogout()">LogOut <mat-icon>exit_to_app</mat-icon></button>
+      </ng-template>
+    </div>
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+     <mat-icon>menu</mat-icon>
+    </button>
+
+</mat-toolbar>
+<mat-menu color="warn" x-position="before" #menu="matMenu">
+    <!-- <button mat-menu-item routerLink="/products">Products</button>
+    <button mat-menu-item routerLink="/dashboard">Dashboard</button> -->
+    <ng-template [ngIf]="auth.isAuthenticated()">
+        <button mat-menu-item routerLink="/restaurants">Restaurants</button>
+        <button mat-menu-item routerLink="/favorite-list">Favourite-List</button>
+      </ng-template>
+      <ng-template [ngIf]="!auth.isAuthenticated()">
+          <button mat-menu-item routerLink="/signup">Register</button>
+          <button mat-menu-item routerLink="/signin">LogIn</button>
+      </ng-template>
+      <ng-template [ngIf]="auth.isAuthenticated()">
+        <button mat-menu-item style="cursor:pointer"  (click)="usrLogout()">LogOut</button>
+      </ng-template>
+</mat-menu>
